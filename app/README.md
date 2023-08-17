@@ -1,3 +1,0 @@
-MOVIE FINDER APP: This is an application that will display all possible movies that are related to the title of movie you are currently looking for.The Movie Finder is a user-friendly and understandable web application that enables you to explore a numerous collection of movies from different genres and eras. Whether you're a film enthusiast or simply looking for entertainment options for the evening, this app has been developed for you.
-
-link to Demo: https://www.loom.com/share/2900c141d47f47b8b42817112d714ab8?sid=688c2d96-ed56-4df2-a5ee-31bfbf3afc6c
