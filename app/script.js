@@ -15,7 +15,7 @@ async function searchMovies() {
         const response = await fetch(apiUrl);
         const data = await response.json();
 
-        movieList.innerHTML = ''; // Clear previous results
+        movieList.innerHTML = '';
 
         data.results.forEach(movie => {
             const movieCard = document.createElement('div');
