@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Information</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div class="main">
-        <h2>Movie Information</h2>
-        <input type="text" id="searchInput" placeholder="Enter movie title">
-        <select id="sortSelect">
-            <option value="release_date">Sort by Release Date</option>
-            <option value="popularity">Sort by Popularity</option>
-        </select>
-        <div id="MDetails"></div>
+    <div class="container">
+        <h1>Movie Information</h1>
+        <form method="post">
+            <label for="movie_title">Enter movie title:</label>
+            <input type="text" id="movie_title" name="movie_title" required>
+            <button type="submit">Search</button>
+        </form>
+
+        {% if movie %}
+        <div class="movie-details">
+            <h2>{{ movie['title'] }}</h2>
+            <p>Release Date: {{ movie['year'] }}</p>
+            <p>Plot: {{ movie['plot'] }}</p>
+            <p>IMDb Rating: {{ movie['imdb_rating'] }}</p>
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
     </div>
 </body>
 </html>
